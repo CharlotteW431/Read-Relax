@@ -1,41 +1,114 @@
 .gallery-wrap {
+    align-items: center;
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 70vh;
+    margin: 0 auto;
   }
   
-  .item {
-    flex: 1;
+  .item-container {
+    align-items: center;
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: row;
     height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: none;
-    transition: flex 0.8s ease;
+    position: relative;
+    justify-content: center;
+    transition: flex 1s ease;
     
-    &:hover{
-      cursor: pointer;
-      flex: 2;
-    }
   }
   
-  .item-1 { 
+  .item-0 { 
     background-color: #B8F6E5 ;
   }
   
-  .item-2 { 
+  .item-1 { 
     background-color:#9fd4b7;
   }
   
-  .item-3 { 
+  .item-2 { 
     background-color:#bcebc4;
   }
   
-  .item-4 { 
+  .item-3 { 
     background-color: #a6d49f;;
   }
   
-  .item-5 { 
+  .item-4 { 
     background-color:#d7f6b8;
   }
   
+  .item {
+    align-items: flex-end;
+    display: flex;
+    font-family:'Times New Roman', Times, serif ;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+  }
+
+  .item-container:link {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .item-container:visited {
+    text-decoration: none;
+    color: black;
+  }
+
+  .sticker-container{
+    background-color: rgba(255,255,255,.2);
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 5px;
+    display: flex;
+    flex: 0 1 auto;
+    margin: auto auto 5px;
+    max-width: 150px;
+    padding: 5px;
+  }
+  .sticker{
+    background-color: rgb(255, 251, 240);
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .item-container:hover{
+    flex-grow: 2;
+    transition: flex 0.6s ease;
+  }
+
+  .item-container:hover .synopsis-container {
+    display: block;
+  }
+
+  .synopsis-container{
+    display: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+    position:absolute;
+    background-color: rgba(255,255,255,1);
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    left: 60%;
+    max-width: 300px;
+    padding: 20px;
+    top: calc(50% - 50px);
+    width: 300px;
+    z-index: 5;
+  }
+
+  .synopsis-container::after{
+    content: "";
+    border: 20px solid transparent;
+    border-top-color: rgba(255,255,255,1);
+    border-bottom: 0;
+    bottom: -20px;
+    left: 20%;
+    margin-left: -20px;
+    position: absolute;
+  }
