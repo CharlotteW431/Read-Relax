@@ -56,21 +56,19 @@ function fillShelf() {
 
     for (var i = 0; i < books.length;i++){
 
-        content +=  `<div class="item item-${i}" style="background-image:url('static/images/${books[i].id}.jpg')" data-bs-toggle="collapse" data-bs-target="#synopsis${i}" aria-expanded="false" aria-controls="synopsis${i}">
-                        <a class= "h3 spine" href="review.html?book=${books[i].id}">
+        content +=  `<a class="h3 item-container" href="review.html?book=${books[i].id}">
+                        <div class="item item-${i}" style="background-image:url('static/images/${books[i].id}.jpg')">
+                            <div class="synopsis-container">
+                            ${books[i].synopsis}
+                            </div>
                             <div class="sticker-container">
                                 <div class="sticker">                                                            
                                     <div class="mt-3 text-center">${books[i].title}</div>
-                                    <div class="mt-3 text-center">${books[i].author}</div>
+                                    <div class="h4 mt-3 text-center">${books[i].author}</div>
                                 </div>
                             </div>
-                            <div class="collapse" id="synopsis${i}">
-                                <div class="card card-body item-${i} h6">
-                                    ${books[i].synopsis}
-                                </div>
-                            </div>
-                        </a>
-                    </div>`
+                        </div>
+                    </a>`
     }
 
   gallery.innerHTML = content;
