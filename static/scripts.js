@@ -31,6 +31,7 @@ function fillReview()
     var synopsis = document.getElementById("reviewSynopsis");
     var body = document.getElementById("reviewBody");
     var image = document.getElementById("reviewImage");
+    var pgTitle = document.getElementById("pageTitle");
     
     //this extracts the relevant entry for each elemt from the array
     var toTitle =  books[book][1];
@@ -42,15 +43,15 @@ function fillReview()
     author.innerHTML = toAuthor;
     synopsis.innerHTML = toSynopsis;
     body.innerHTML = toBody;
-
     //now we need some magic to build the image URL - images should be named to reflect the unique ID of each entry (the number at the start of the array entry)
-
     var toImageURL = "./static/images/" + books[book][0] + ".jpg";
     var toImageAlt = toTitle + " cover image";
-
     image.setAttribute("src", toImageURL);
     image.setAttribute("alt", toImageAlt);
 
+    //finally append the book title to the page <title> tag
+
+    pgTitle.innerHTML += "¦¦ " + toTitle + " by " +toAuthor;
 
 
 }

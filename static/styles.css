@@ -11,11 +11,11 @@
     background-position: center;
     background-size: cover;
     background-repeat: none;
-    transition: flex 0.8s ease;
+    transition: flex 0.6s ease;
     
     &:hover{
       cursor: pointer;
-      flex: 2;
+      flex: 1.5;
     }
   }
   
@@ -39,3 +39,24 @@
     background-color:#d7f6b8;
   }
   
+  .spine {
+    font-family:'Times New Roman', Times, serif ;
+  }
+
+  .spine:link {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .spine:visited {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .spine:hover {
+    text-decoration: underline;
+  }
+  
+  .spine:active {
+    text-decoration: underline;
+  }
