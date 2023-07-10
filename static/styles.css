@@ -19,23 +19,23 @@
     }
   }
   
-  .item-1 { 
+  .item-0 { 
     background-color: #B8F6E5 ;
   }
   
-  .item-2 { 
+  .item-1 { 
     background-color:#9fd4b7;
   }
   
-  .item-3 { 
+  .item-2 { 
     background-color:#bcebc4;
   }
   
-  .item-4 { 
+  .item-3 { 
     background-color: #a6d49f;;
   }
   
-  .item-5 { 
+  .item-4 { 
     background-color:#d7f6b8;
   }
   
@@ -59,4 +59,18 @@
   
   .spine:active {
     text-decoration: underline;
+  }
+
+  .sticker-container{
+    background-color: rgba(255,255,255,.2);
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 5px;
+    margin: 5px auto;
+    max-width: 150px;
+    padding: 5px;
+  }
+  .sticker{
+    background-color: rgb(255, 251, 240);
+    border-radius: 5px;
+    padding: 10px;
   }
